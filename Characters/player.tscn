@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://bnd1eog8di6da"]
+
+[ext_resource type="Script" path="res://Characters/player.gd" id="1_ekdej"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_4yl04"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_vttoo"]
+
+[node name="Player" type="CharacterBody3D"]
+script = ExtResource("1_ekdej")
+
+[node name="Pivot" type="Node3D" parent="."]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("CapsuleMesh_4yl04")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("CapsuleShape3D_vttoo")
